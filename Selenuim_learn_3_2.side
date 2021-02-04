@@ -1,0 +1,461 @@
+{
+  "id": "d868bea4-885d-406c-803b-b16c463d5db9",
+  "version": "2.0",
+  "name": "Selenuim_learn",
+  "url": "https://open-eshop.stqa.ru",
+  "tests": [{
+    "id": "46182720-4edf-4263-bc2b-30d300ecbccf",
+    "name": "1.Authorization",
+    "commands": [{
+      "id": "e5d38077-4418-4296-8030-e54c4b8f3b42",
+      "comment": "",
+      "command": "open",
+      "target": "/oc-panel/auth/login/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0fab08cd-3ef8-42ed-a8c0-f637318fe7be",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc37a4c7-3189-4189-9e55-d4eec89a7503",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.btn-primary-white", "css:finder"],
+        ["xpath=//a[contains(@href, 'https://open-eshop.stqa.ru/oc-panel/auth/login#login-modal')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,' Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0b46aa6-696a-4546-8ce3-2f78060f5d8c",
+      "comment": "",
+      "command": "type",
+      "target": "css=#login-modal input[name=\"email\"]",
+      "targets": [
+        ["name=email", "name"],
+        ["css=#login-modal .form-group:nth-child(1) .form-control", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='login-modal']/div/div/div[2]/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "demo@open-eshop.com"
+    }, {
+      "id": "ec48016b-ebf1-485d-9152-4a4813e07962",
+      "comment": "",
+      "command": "type",
+      "target": "css=#login-modal input[name=\"password\"]",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.auth:nth-child(1) > .form-group:nth-child(2) .form-control", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='login-modal']/div/div/div[2]/form/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "demo"
+    }, {
+      "id": "40dee7db-c5c3-4250-a477-d8a03481beec",
+      "comment": "",
+      "command": "click",
+      "target": "css=#login-modal button[type='submit']",
+      "targets": [
+        ["css=.well:nth-child(1) > .col-sm-offset-2:nth-child(4) > .btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='login-modal']/div/div/div[2]/form/div[4]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bb490981-f62c-4223-8940-59c72cdf99b0",
+      "comment": "",
+      "command": "pause",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "426dc0ac-725b-4ded-b018-520d79a9aa63",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//div[@id='content']/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Welcome Admin')]", "xpath:innerText"]
+      ],
+      "value": "Welcome Admin"
+    }]
+  }, {
+    "id": "971e9bcc-f8a1-480f-aacc-a97abe25a643",
+    "name": "2.Create_Coupon",
+    "commands": [{
+      "id": "0e4f2abb-f656-4c79-9c8b-250d80fadd21",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d4aa6e97-ed40-4ea1-a4fc-d74427fbf439",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d700b5d0-fb49-4188-8e22-7d621372ff97",
+      "comment": "",
+      "command": "click",
+      "target": "css=.glyphicon-user",
+      "targets": [
+        ["css=.glyphicon-user", "css:finder"],
+        ["xpath=//i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "adcc590d-2e61-4726-b506-825cf5a9f988",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=eShop",
+      "targets": [
+        ["linkText=eShop", "linkText"],
+        ["css=.panel:nth-child(1) > .panel-heading a", "css:finder"],
+        ["xpath=//div[@id='accordion']/div/div/h4/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#collapseOne')]", "xpath:href"],
+        ["xpath=//h4/a", "xpath:position"],
+        ["xpath=//a[contains(.,' eShop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ccb8047-c628-41ff-89ec-55590e5445b5",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'eShop')]",
+      "targets": [
+        ["css=.panel:nth-child(1) .title-txt", "css:finder"],
+        ["xpath=//div[@id='accordion']/div/div/h4/a/span[2]", "xpath:idRelative"],
+        ["xpath=//a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'eShop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "67f8ad2c-736e-40c2-8a3a-d8dcf85ff66f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'Coupons')]",
+      "targets": [
+        ["css=#collapseOne tr:nth-child(4) .side-name-link", "css:finder"],
+        ["xpath=//div[@id='collapseOne']/div/table/tbody/tr[4]/td/li/a/span", "xpath:idRelative"],
+        ["xpath=//tr[4]/td/li/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Coupons')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "daa659d8-adec-4443-81f2-0ef64d3764e0",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,999)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ce96822b-f13b-4c69-9011-5b7997ffb180",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, 'https://open-eshop.stqa.ru/oc-panel/Coupon/create')]",
+      "targets": [
+        ["css=.pull-right:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='content']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://open-eshop.stqa.ru/oc-panel/Coupon/create')]", "xpath:href"],
+        ["xpath=//body/div/div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "301bc09b-ce8b-4d5c-ac9d-7d4d6b6cfb01",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=name", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[2]/div/div/div/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "027a0383-5d59-40ac-9dee-a6ff43bedea6",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=name", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[2]/div/div/div/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "DiNYT_Coupon_01"
+    }, {
+      "id": "d408a476-b2ec-4e8a-b268-92a8aba0f578",
+      "comment": "",
+      "command": "click",
+      "target": "name=valid_date",
+      "targets": [
+        ["name=valid_date", "name"],
+        ["css=.form-group:nth-child(6) .form-control", "css:finder"],
+        ["xpath=//input[@name='valid_date']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[2]/div/div/div/form/div[5]/div/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7555b547-1e8d-47a3-b840-3cbe441c1e18",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr > .active",
+      "targets": [
+        ["css=tr > .active", "css:finder"],
+        ["xpath=//div[5]/div/table/tbody/tr[4]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'17')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2027102-8cf2-48bd-a53a-13711d9b2356",
+      "comment": "",
+      "command": "click",
+      "target": "id=number_coupons",
+      "targets": [
+        ["id=number_coupons", "id"],
+        ["name=number_coupons", "name"],
+        ["css=#number_coupons", "css:finder"],
+        ["xpath=//input[@id='number_coupons']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[2]/div/div/div/form/div[6]/div/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a6934cd4-166e-4d42-8cdd-9f6c61514497",
+      "comment": "",
+      "command": "type",
+      "target": "id=number_coupons",
+      "targets": [
+        ["id=number_coupons", "id"],
+        ["name=number_coupons", "name"],
+        ["css=#number_coupons", "css:finder"],
+        ["xpath=//input[@id='number_coupons']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[2]/div/div/div/form/div[6]/div/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div/input", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "2957b126-b581-4984-b8aa-93899df5a0bd",
+      "comment": "",
+      "command": "click",
+      "target": "name=submit",
+      "targets": [
+        ["name=submit", "name"],
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@name='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[2]/div/div/div/form/div[7]/button", "xpath:idRelative"],
+        ["xpath=//div[7]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ac03b06-91b9-4253-8559-6677b1094346",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//h4[contains(.,'Success')]",
+      "targets": [
+        ["css=.alert-heading", "css:finder"],
+        ["xpath=//div[@id='content']/div/h4", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Success')]", "xpath:innerText"]
+      ],
+      "value": "Success"
+    }]
+  }, {
+    "id": "879de9bc-790c-4c31-b175-b2cacec73261",
+    "name": "3.Find_Delete_Coupon",
+    "commands": [{
+      "id": "86fcc269-354b-4ae7-b2ae-50c1e453f7ff",
+      "comment": "Открываем страницу с купонами",
+      "command": "open",
+      "target": "/oc-panel/coupon",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "30d1db7b-9a7d-4d81-aa10-aa7813c5704a",
+      "comment": "Вводим в строку поиска купон по наименованию DiNYT_Coupon_01",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.form-control:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "DiNYT_Coupon_01"
+    }, {
+      "id": "74706a33-6d9c-4164-b248-d6d6a505fc92",
+      "comment": "Нажимаем кнопку \"Поиска\"",
+      "command": "click",
+      "target": "css=.form-inline > .btn",
+      "targets": [
+        ["css=.form-inline > .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "931f019c-1421-4cd8-9f8e-b54e9ae9a772",
+      "comment": "Ждём 1 секунду для поиска результата",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8ee26772-0d26-4ec3-8067-1f3f6c74e99d",
+      "comment": "Проверяем наличие текста в результатах поиска (в строке таблицы)",
+      "command": "assertText",
+      "target": "xpath=//div[2]/div[2]/div/div/table/tbody/tr/td",
+      "targets": [],
+      "value": "DiNYT_Coupon_01"
+    }, {
+      "id": "c7d4296a-6093-4590-a8ef-79d8f984e087",
+      "comment": "Нажали в таблице кнопку удалить",
+      "command": "click",
+      "target": "css=.btn-danger",
+      "targets": [
+        ["css=.btn-danger", "css:finder"],
+        ["xpath=//tr[@id='tr9999']/td[7]/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://open-eshop.stqa.ru/oc-panel/Coupon/delete/9999')]", "xpath:href"],
+        ["xpath=//td[7]/a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6997d206-ecc2-4e9f-bfcb-8ee923faaacd",
+      "comment": "Ждём 2 секунды появления всплывающего окна",
+      "command": "pause",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b663a6d7-eef1-4cb8-8894-70d1533d7333",
+      "comment": "Жмём на подтверждение удаления купона (Yes, definitely)",
+      "command": "click",
+      "target": "xpath=//button[contains(.,'Yes, definitely!')]",
+      "targets": [
+        ["css=.confirm", "css:finder"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Yes, definitely!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8a1400d5-7679-4257-afe3-b7b77b143e0a",
+      "comment": "Ждём 5 секунд удаления купона",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4455483a-1332-4dc2-960a-b9acfcc4c975",
+      "comment": "В строке поиска вводим наименование купона DiNYT_Coupon_01",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.form-control:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "DiNYT_Coupon_01"
+    }, {
+      "id": "66a0849f-4b55-4e1b-9b50-ed8f9b3b891b",
+      "comment": "Нажатие на кнопку \"Поиск\"",
+      "command": "click",
+      "target": "css=.form-inline > .btn",
+      "targets": [
+        ["css=.form-inline > .btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ceaef5e2-228b-4ad5-aa74-76e4226cb7d0",
+      "comment": "Ждём 1 секунду для поиска результата",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "feb914d8-d5fa-4406-88f6-cc4332dc2dff",
+      "comment": "Проверяем отсутствие наличия тегов tr/td с результатом поиска",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//div[2]/div[2]/div/div/table/tbody/tr/td",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "dc2ca8cf-cfc9-44e4-aa1a-8cc25ffab201",
+    "name": "4.Logout",
+    "commands": [{
+      "id": "d05a7579-14c6-4009-abe8-862b1470f513",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "812eee91-3cd0-4d38-937e-325dc2e81597",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "53041768-25c0-4ccd-baf4-ea1b7d5ab5c6",
+      "comment": "Открыть список с действиями",
+      "command": "click",
+      "target": "css=.btn:nth-child(2)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "afdfadc2-6798-4f4b-8e78-920a7ea26761",
+      "comment": "Выход из системы",
+      "command": "click",
+      "target": "css=div.btn-group a[href*=logout]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c11467d0-ff19-4901-b6c0-2cddf8c354ab",
+      "comment": "Проверка наличия кнопки содержащей текст ссылки 'login'",
+      "command": "assertElementPresent",
+      "target": "css=div.btn-group a[href*='login']",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "f66794d8-72aa-46da-bed8-5cb3cac49554",
+    "name": "Coupon Suite Ex.1",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["46182720-4edf-4263-bc2b-30d300ecbccf", "971e9bcc-f8a1-480f-aacc-a97abe25a643", "879de9bc-790c-4c31-b175-b2cacec73261", "dc2ca8cf-cfc9-44e4-aa1a-8cc25ffab201"]
+  }],
+  "urls": ["http://open-eshop.stqa.ru/", "https://open-eshop.stqa.ru/"],
+  "plugins": []
+}
